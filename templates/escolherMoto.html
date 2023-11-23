@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montadinhas Design</title>
+    <link rel="stylesheet" href="{% static 'escolherMoto.css' %}">
+</head>
+<body>
+    <h1>MONTADINHAS DESIGN</h1>
+    <h2>Escolha uma moto</h2>
+
+    <div class="div1">
+        <div class="container">
+            <div class="zoom">
+                <a href="{% url 'start' %}">
+                    <img src="{% static 'img/menu/startmenu.png' %}" class="motosMenu" alt="imagem start">
+                </a>
+            </div>
+            <h3>Start 160</h3>
+        </div>
+
+        <div class="container">
+            <div class="zoom">
+                <img src="{% static 'img/menu/fanmenu.png' %}" class="motosMenu" alt="imagem fan">
+            </div>
+            <h3>Fan 160</h3>
+        </div>
+
+        <div class="container">
+            <div class="zoom">
+                <img src="{% static 'img/menu/titanmenu.png' %}" class="motosMenu" alt="imagem fan">
+            </div>
+            <h3>Titan 160</h3>
+        </div>
+    </div>
+
+    
+    <script src="{% static 'escolherMoto.js' %}"></script>
+</body>
+</html>

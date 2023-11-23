@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montadinhas Design</title>
+    <link rel="stylesheet" href="{% static 'start.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+</head>
+<body>
+    
+
+    
+    <div id="div1" class="div1">
+        <img src="{% static 'img/start 160 2020 preta.png' %}" class="start" alt="imagem start">
+
+        <!--rabeta-->
+        <img id="rabetaOrig01" src="{% static 'img/rabeta/rabetaOrig01.png' %}" class="start" alt="Rabeta Original">
+
+        <!--motor-->
+        <img id="tampaPrata" src="/{{moto.tampaMotor}}" class="start" alt="Tampa Motor">
+
+        <!--seta-->
+        <img src="{% static 'img/seta/seta tw tras.png' %}" class="start" alt="seta">
+
+        <!--frente-->
+        <img id="frenteFan22Preta" src="/{{moto.frente}}" class="start" alt="frente fan 22 preta">    
+
+        <!--roda raiada-->
+        <img id="raiadaT" src="/{{moto.roda_t}}" class="start" alt="roda raiada traseira">
+        <img id="raiadaD" src="/{{moto.roda_d}}" class="start" alt="roda raiada dianteira">
+
+        <!--bacalhau-->
+        <img src="{% static 'img/bacalhau/bacalhau.png' %}" class="start" alt="bacalhau">
+
+        <!--escapamento-->
+        <img id="escapeOrigPrata" src="/{{moto.escapamento}}" class="start" alt="escapamento original prata">
+
+        <!--carenagemTras-->
+        <img id="carenagemTrasPreta" src="/{{moto.carenagemTraseira}}" class="start" alt="carenagem traseira preto">
+
+        <!--alça-->
+        <img id="alcaOrigPreta" src="{% static 'img/alca/alcaOrigPreta.png' %}" class="start" alt="alça original preta">
+
+        <!--tanque-->
+        <img id="tanqueStartPreto" src="/{{moto.tanque}}" class="start" alt="tanque start preto">
+
+        
+    </div>
+
+    <div class="barra">
+        <div id="selecPecas" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha um modelo de peça</div>
+            <button id="btRodas" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">Rodas</button>
+            <button id="btTanque" class="bt"> <img src="{% static 'img/pecasMenu/tanque/preto.png' %}" class="img">Tanque</button>
+            <button id="btCarenagemT" class="bt"> <img src="{% static 'img/pecasMenu/carenagem traseira/preto.png' %}" class="img">Carenagem Traseira</button>
+            <button id="btRabeta" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig01.png' %}" class="img">Rabeta</button>
+            <button id="btAlca" class="bt"> <img src="{% static 'img/pecasMenu/alça/preto.png' %}" class="img">Alça</button>
+            <button id="btFrente" class="bt"> <img src="{% static 'img/pecasMenu/frente/fan/preta.png' %}" class="img">Frente</button>
+            <button id="btEscap" class="bt"> <img src="{% static 'img/pecasMenu/escap/original.png' %}" class="img">Escapamento</button>
+            <button id="btTampaMotor" class="bt"> <img src="{% static 'img/pecasMenu/tampa motor/prata.png' %}" class="img">Tampa do motor</button>
+        </div>
+
+        <!--rodas-->
+        <div id="rodas" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma roda</div>
+            <button id="voltarRodas" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <!--roda pe-->
+            <button id="peTPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peTrazeira.png' %}" class="img">roda pe traseira</button>
+            <button id="peDPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">roda pe dianteira</button>
+
+            <!--roda raiada-->
+            <button id="raiadaTras" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiTraseira.png' %}" class="img">roda raiada traseira</button>
+            <button id="raiadaDir" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">roda raiada dianteira</button>
+
+        </div>
+
+        <!--paralamaPe-->
+        <div id="paralamaPe" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarParalamaPe" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <!--paralama pe-->
+            <button id="paralamaPePreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">paralama pe Preto</button>
+            <button id="paralamaPeVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">paralama pe Vermelho</button>
+        </div>
+
+        <!--paralamaRai-->
+        <div id="paralamaRai" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarParalamaRai" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <!--paralama raiada-->
+            <button id="paralamaRaiPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">paralama preto raiada</button>
+            <button id="paralamaRaiVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/rai/vermelho.png' %}" class="img">paralama vermelho raiada</button>
+        </div>
+
+        <!--tanque-->
+        <div id="tanque" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarTanque" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="tanqueStartpreto" class="bt"> <img src="{% static 'img/pecasMenu/tanque/preto.png' %}" class="img">tanque de start preto</button>
+            <button id="tanqueStartVerm" class="bt"> <img src="{% static 'img/pecasMenu/tanque/vermelho.png' %}" class="img">tanque de start vermelho</button>
+        </div>
+
+        
+        <!--carenagem traseira-->
+        <div id="carenagemTras" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarCarenagemT" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="carenagemTraspreta" class="bt"> <img src="{% static 'img/pecasMenu/carenagem traseira/preto.png' %}" class="img">traseira preta</button>
+            <button id="carenagemTrasVerm" class="bt"> <img src="{% static 'img/pecasMenu/carenagem traseira/vermelho.png' %}" class="img">traseira vermelha</button>
+        </div>
+
+        <!--rabeta-->
+        <div id="rabeta" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarRabeta" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="rabetaorig01" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig01.png' %}" class="img">Rabeta original 01</button>
+            <button id="rabetaOrig02" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig02.png' %}" class="img">Rabeta original 02</button>
+            <button id="rabetaOrig03" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig03.png' %}" class="img">Rabeta original 03</button>
+            <button id="rabetaOrig04" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig04.png' %}" class="img">Rabeta original 04</button>
+            <button id="rabetaOrig05" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig05.png' %}" class="img">Rabeta original 05</button>
+            <button id="rabetaOrig06" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig06.png' %}" class="img">Rabeta original 06</button>
+            <button id="rabetaNvI01" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvI01.png' %}" class="img">Rabeta raspada 01</button>
+            <button id="rabetaNvI02" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvI02.png' %}" class="img">Rabeta raspada 02</button>
+            <button id="rabetaNvI03" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvI03.png' %}" class="img">Rabeta raspada 03</button>
+            <button id="rabetaNvII01" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvII01.png' %}" class="img">Rabeta raspada 04</button>
+            <button id="rabetaNvII02" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvII02.png' %}" class="img">Rabeta raspada 05</button>
+            <button id="rabetaNvII03" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvII03.png' %}" class="img">Rabeta raspada 06</button>
+            <button id="rabetaNvII04" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvII04.png' %}" class="img">Rabeta raspada 07</button>
+            <button id="rabetaNvII05" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvII05.png' %}" class="img">Rabeta raspada 08</button>
+            <button id="rabetaNvIII01" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvIII01.png' %}" class="img">Rabeta raspada 09</button>
+            <button id="rabetaNvIII02" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvIII02.png' %}" class="img">Rabeta raspada 10</button>
+            <button id="rabetaNvIII03" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaNvIII03.png' %}" class="img">Rabeta raspada 11</button>
+        </div>
+
+        <!--alça-->
+        <div id="alca" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma alça</div>
+            <button id="voltarAlca" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="alcaOrigpreta" class="bt"> <img src="{% static 'img/pecasMenu/alça/preto.png' %}" class="img">Alça original preta</button>
+            <button id="alcaOrigCromo" class="bt"> <img src="{% static 'img/pecasMenu/alça/cromo.png' %}" class="img">Alça original cromada</button>
+            <button id="alcaAltaPreta" class="bt"> <img src="{% static 'img/pecasMenu/alça/alcaAltaPreta.png' %}" class="img">Alça alta preta</button>
+            <button id="alcaAltaCromo" class="bt"> <img src="{% static 'img/pecasMenu/alça/alcaAltaCromo.png' %}" class="img">Alça alta cromada</button>
+            <button id="alcaTitanPreta" class="bt"> <img src="{% static 'img/pecasMenu/alça/alcaTitanPreta.png' %}" class="img">Alça titan preta</button>
+            <button id="alcaTitanPrata" class="bt"> <img src="{% static 'img/pecasMenu/alça/alcaTitanPrata.png' %}" class="img">Alça titan prata</button>
+            <button id="churrasqueiraCromo" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraCromo.png' %}" class="img">Churrasqueira cromada</button>
+            <button id="churrasqueiraCromoGivi" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraCromoGivi.png' %}" class="img">Churrasqueira cromada com givi</button>
+            <button id="churrasqueiraCromoGiviBau" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraCromoGiviBau.png' %}" class="img">Churrasqueira cromada com givi/bau</button>
+            <button id="churrasqueiraCromoSup" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraCromoSup.png' %}" class="img">Churrasqueira cromada com suporte</button>
+            <button id="churrasqueiraCromoSupBau" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraCromoSupBau.png' %}" class="img">Churrasqueira cromada com sup/bau</button>
+            <button id="churrasqueiraPreta" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraPreta.png' %}" class="img">Churrasqueira preta</button>
+            <button id="churrasqueiraPretaGivi" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraPretaGivi.png' %}" class="img">Churrasqueira preta com givi</button>
+            <button id="churrasqueiraPretaGiviBau" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraPretaGiviBau.png' %}" class="img">Churrasqueira preta com givi/bau</button>
+            <button id="churrasqueiraPretaSup" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraPretaSup.png' %}" class="img">Churrasqueira cromada com suporte</button>
+            <button id="churrasqueiraPretaSupBau" class="bt"> <img src="{% static 'img/pecasMenu/alça/churrasqueiraPretaSupBau.png' %}" class="img">Churrasqueira cromada com sup/bau</button>
+        </div>
+
+        <!--Escolher frente-->
+        <div id="frente" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha um modelo de frente</div>
+            <button id="voltarFrente" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="frentefan22preta" class="bt"> <img src="{% static 'img/pecasMenu/frente/fan/preta.png' %}" class="img">Frente fan 22 preta</button>
+            <button id="frentetitan22preta" class="bt"> <img src="{% static 'img/pecasMenu/frente/titan22/preta.png' %}" class="img">Frente titan 22 preta</button>
+            <button id="frenteTwPreta" class="bt"> <img src="{% static 'img/pecasMenu/frente/tw/preta.png' %}" class="img">Frente twister preta</button>
+        </div>
+
+        <!--Frente fan-->
+        <div id="frenteFan" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarFrenteFan" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="frenteFan22preta" class="bt"> <img src="{% static 'img/pecasMenu/frente/fan/preta.png' %}" class="img">Frente fan 22 preta</button>
+            <button id="frenteFan22Verm" class="bt"> <img src="{% static 'img/pecasMenu/frente/fan/vermelha.png' %}" class="img">Frente fan 22 vermelha</button>
+        </div>
+
+        <!--Frente titan 22-->
+        <div id="frenteTitan22" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarFrenteTitan22" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="frenteTitan22preta" class="bt"> <img src="{% static 'img/pecasMenu/frente/titan22/preta.png' %}" class="img">Frente titan 22 preta</button>
+            <button id="frenteTitan22Verm" class="bt"> <img src="{% static 'img/pecasMenu/frente/titan22/vermelha.png' %}" class="img">Frente titan 22 vermelha</button>
+        </div>
+
+        <!--Frente twister-->
+        <div id="frenteTw" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarFrenteTW" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="frenteTwpreta" class="bt"> <img src="{% static 'img/pecasMenu/frente/tw/preta.png' %}" class="img">Frente twister preta</button>
+            <button id="frenteTwVerm" class="bt"> <img src="{% static 'img/pecasMenu/frente/tw/vermelha.png' %}" class="img">Frente twister vermelha</button>
+        </div>
+
+        <!--escapamento-->
+        <div id="escap" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha um modelo de escapamento</div>
+            <button id="voltarEscap" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="escapeOrigprata" class="bt"> <img src="{% static 'img/pecasMenu/escap/original.png' %}" class="img">Original</button>
+            <button id="escapeDeLata" class="bt"> <img src="{% static 'img/pecasMenu/escap/delata.png' %}" class="img">De lata</button>
+            <button id="escapeDeLataProt" class="bt"> <img src="{% static 'img/pecasMenu/escap/delataProt.png' %}" class="img">De lata com proteção</button>
+            <button id="escapeTorbal" class="bt"> <img src="{% static 'img/pecasMenu/escap/torbal.png' %}" class="img">Torbal</button>
+            <button id="escapeDoreAzulAT" class="bt"> <img src="{% static 'img/pecasMenu/escap/doreAzul.png' %}" class="img">Dore azul atual</button>
+            <button id="escapeDoreVermAT" class="bt"> <img src="{% static 'img/pecasMenu/escap/doreVermelho.png' %}" class="img">Dore vermelho atual</button>
+            <button id="escapeDorePretoAT" class="bt"> <img src="{% static 'img/pecasMenu/escap/dorePreto.png' %}" class="img">Dore preto atual</button>
+            <button id="escapeDorePolidoAT" class="bt"> <img src="{% static 'img/pecasMenu/escap/dorePrata.png' %}" class="img">Dore Polido atual</button>
+        </div>
+
+        <!--tampa motor-->
+        <div id="tampaMotor" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarTampaMotor" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="tampaprata" class="bt"> <img src="{% static 'img/pecasMenu/tampa motor/prata.png' %}" class="img">Tampa motor prata</button>
+            <button id="tampaPreta" class="bt"> <img src="{% static 'img/pecasMenu/tampa motor/preta.png' %}" class="img">Tampa motor preta</button>
+        </div>
+        
+    </div>
+
+    <header>
+        <div class="titulo"><h1>MONTADINHAS DESIGN</h1></div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'escolherMoto' %}">Escolher moto</a></li>
+                <li><a href="{% url 'garagem' %}">Garagem</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+            </ul>
+
+        </div>
+    </header>    
+    <script src="{% static 'start.js' %}"></script>
+</body>
+</html>
