@@ -2,8 +2,9 @@ import email
 from os import name
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib.auth import logout
 from django.contrib import auth
-
+from django.contrib.auth.decorators import login_required
 def index (request): 
     if request.method == 'POST':
         nome  = request.POST['nome']
@@ -45,8 +46,12 @@ def login (request):
         
             if user is not None:
                 auth.login(request, user)
-                return redirect ('escolherMoto') 
+                return redirect ('garagem') 
         return redirect ('login')
     else:
         return render (request, 'login.html')
-        
+
+@login_required(login_url="/login")
+def sair(request):
+    logout(request)
+    return redirect('login')

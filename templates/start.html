@@ -17,7 +17,7 @@
         <img src="{% static 'img/start 160 2020 preta.png' %}" class="start" alt="imagem start">
 
         <!--rabeta-->
-        <img id="rabetaOrig01" src="{% static 'img/rabeta/rabetaOrig01.png' %}" class="start" alt="Rabeta Original">
+        <img id="rabetaOrig01" src="/{{moto.rabeta}}" class="start" alt="Rabeta Original">
 
         <!--motor-->
         <img id="tampaPrata" src="/{{moto.tampaMotor}}" class="start" alt="Tampa Motor">
@@ -30,7 +30,7 @@
 
         <!--roda raiada-->
         <img id="raiadaT" src="/{{moto.roda_t}}" class="start" alt="roda raiada traseira">
-        <img id="raiadaD" src="/{{moto.roda_d}}" class="start" alt="roda raiada dianteira">
+        <img id="RaiadaDianteiraParalamaPreto" src="/{{moto.roda_d}}" class="start" alt="roda raiada dianteira">
 
         <!--bacalhau-->
         <img src="{% static 'img/bacalhau/bacalhau.png' %}" class="start" alt="bacalhau">
@@ -42,7 +42,7 @@
         <img id="carenagemTrasPreta" src="/{{moto.carenagemTraseira}}" class="start" alt="carenagem traseira preto">
 
         <!--alça-->
-        <img id="alcaOrigPreta" src="{% static 'img/alca/alcaOrigPreta.png' %}" class="start" alt="alça original preta">
+        <img id="alcaOrigPreta" src="/{{moto.tanque}}" class="start" alt="alça original preta">
 
         <!--tanque-->
         <img id="tanqueStartPreto" src="/{{moto.tanque}}" class="start" alt="tanque start preto">
@@ -63,37 +63,88 @@
             <button id="btTampaMotor" class="bt"> <img src="{% static 'img/pecasMenu/tampa motor/prata.png' %}" class="img">Tampa do motor</button>
         </div>
 
-        <!--rodas-->
+        <!-- escolher rodas-->
         <div id="rodas" class="divPecas">
             <div id="descricaoMenu" class="descricao">Escolha uma roda</div>
             <button id="voltarRodas" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
-            <!--roda pe-->
+
+            <!--roda dianteira-->
+            <button id="rodaFrente" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">roda dianteira</button>
+
+            <!--roda traseira-->
+            <button id="rodaTras" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peTrazeira.png' %}" class="img">roda traseira</button>
+        </div>
+
+        <!--rodas dianteira-->
+        <div id="rodaDianteira" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma roda</div>
+            <button id="voltarRodaD" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+
+            <!--roda dianteira-->
+            <a href="{%url 'edit_roda_d' moto.id 'pe dianteira'%}" id="peDianteiraParalamaPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">pe paralama Preto</a>
+            <a href="{%url 'edit_roda_d' moto.id 'raiada diateira'%}" id="peDianteiraParalamaVermelho" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">pe paralama Vermelho</a>
+            <button id="raiadaDianteiraParalamaPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">raiada paralama preto</button>
+            <button id="raiadaDianteiraParalamaVermelho" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/rai/vermelho.png' %}" class="img">raiada paralama vermelho</button>
+        </div>
+
+        <!--rodas traseira-->
+        <div id="rodaTraseira" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma roda</div>
+            <button id="voltarRodaT" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+
+            <!--roda traseira-->
             <button id="peTPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peTrazeira.png' %}" class="img">roda pe traseira</button>
-            <button id="peDPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">roda pe dianteira</button>
-
-            <!--roda raiada-->
             <button id="raiadaTras" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiTraseira.png' %}" class="img">roda raiada traseira</button>
-            <button id="raiadaDir" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">roda raiada dianteira</button>
 
         </div>
-
         <!--paralamaPe-->
-        <div id="paralamaPe" class="divPecas">
+        <!-- <div id="paralamaPe" class="divPecas">
             <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
-            <button id="voltarParalamaPe" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="voltarParalamaPe" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
             <!--paralama pe-->
-            <button id="paralamaPePreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">paralama pe Preto</button>
-            <button id="paralamaPeVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">paralama pe Vermelho</button>
-        </div>
+           
+           
+        <!-- </div> -->
 
         <!--paralamaRai-->
-        <div id="paralamaRai" class="divPecas">
+        <!-- <div id="paralamaRai" class="divPecas">
             <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
-            <button id="voltarParalamaRai" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
+            <button id="voltarParalamaRai" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
             <!--paralama raiada-->
-            <button id="paralamaRaiPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">paralama preto raiada</button>
+            
+        <!-- </div> -->
+        
+        <!--rodas-->
+        <!-- <div id="rodas" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma roda</div>
+            <button id="voltarRodas" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
+            <!--roda pe-->
+            <!-- <button id="peTPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peTrazeira.png' %}" class="img">roda pe traseira</button>
+            <button id="peDPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">roda pe dianteira</button> -->
+
+            <!--roda raiada-->
+            <!-- <button id="raiadaTras" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiTraseira.png' %}" class="img">roda raiada traseira</button>
+            <button id="raiadaDir" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">roda raiada dianteira</button>
+
+        </div> -->
+
+        <!--paralamaPe-->
+        <!-- <div id="paralamaPe" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarParalamaPe" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
+            <!--paralama pe-->
+            <!-- <a href="{%url 'edit_roda_d' moto.id 'pe dianteira'%}" id="paralamaPePreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">paralama pe Preto</a>
+            <a  href="{%url 'edit_roda_d' moto.id 'raiada diateira'%}" id="paralamaPeVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">paralama pe Vermelho</button>
+        </div> -->
+
+        <!--paralamaRai-->
+        <!-- <div id="paralamaRai" class="divPecas">
+            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
+            <button id="voltarParalamaRai" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
+            <!--paralama raiada-->
+            <!-- <button id="paralamaRaiPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">paralama preto raiada</button>
             <button id="paralamaRaiVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/rai/vermelho.png' %}" class="img">paralama vermelho raiada</button>
-        </div>
+        </div> -->
 
         <!--tanque-->
         <div id="tanque" class="divPecas">

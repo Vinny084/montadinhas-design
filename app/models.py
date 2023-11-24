@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 RODAS_T=[
     ("static/img/roda/pe/traseira/preto.png", "pe traseira"),
@@ -7,15 +8,10 @@ RODAS_T=[
 ]
 
 RODAS_D =[
-    ("static/img/roda/pe/dianteira/preto/preto.png", "pe dianteira"),
-    ("static/img/roda/raiada/dianteira.png", "raiada diateira"),
-]
-
-PARALAMAS =[
-    ("static/img/roda/pe/dianteira/preto/preto.png", "pe preto"),
-    ("static/img/roda/pe/dianteira/preto/vermelho.png", "pe vermelho"),
-    ("static/img/roda/raiada/dianteira.png", "raiada preto"),
-    ("static/img/roda/raiada/paralama/vermelha.png", "raiada vermelho"),
+    ("static/img/roda/pe/dianteira/preto/preto.png", "pe dianteira paralama preto"),
+    ("static/img/roda/pe/dianteira/preto/vermelho.png", "pe dianteira paralama vermelho"),
+    ("static/img/roda/raiada/dianteira.png", "raiada diateira paralama preto"),
+    ("static/img/roda/raiada/paralama/vermelha.png", "raiada dianteira paralama vermelho"),
 ]
 
 TANQUES =[
@@ -92,17 +88,21 @@ TAMPAS_MOTOR =[
 
 
 class Moto(models.Model):
+    titulo = models.CharField("Título", max_length=50)
     roda_t = models.CharField("Roda Traseira", choices=RODAS_T, max_length=150)
     roda_d = models.CharField("Roda Dianteira", choices=RODAS_D, max_length=150)
-    paralama = models.CharField(choices=PARALAMAS, max_length=150)
+    rabeta = models.CharField(choices=RABETAS, max_length=150)
+    alca = models.CharField(choices=ALÇAS, max_length=150)
     carenagemTraseira = models.CharField(choices=CARENAGENS_TRASEIRA, max_length=150)
     frente = models.CharField(choices=FRENTES, max_length=150)
     escapamento = models.CharField(choices=ESCAPAMENTOS, max_length=150)
     tampaMotor = models.CharField(choices=TAMPAS_MOTOR, max_length=150)
+    tanque = models.CharField(choices=TANQUES, max_length=150)
+    usu = models.ForeignKey(User, on_delete=models.PROTECT)
     
 
 class Start(Moto):
-    tanque = models.CharField(choices=TANQUES, max_length=150)
+    pass
         
 
 # class Fan(Moto):

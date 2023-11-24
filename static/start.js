@@ -104,30 +104,6 @@ $('#voltarFrenteTW').click(function(){
     $('#frenteTw').hide();
 });
 
-/*roda*/
-const raiadaD = document.querySelector("#raiadaD");
-const raiadaDir = document.querySelector("#raiadaDir");
-const raiadaT = document.querySelector("#raiadaT");
-const raiadaTras = document.querySelector("#raiadaTras");
-const peDPreto = document.querySelector("#peDPreto");
-const peTPreto = document.querySelector("#peTPreto");
-
-peDPreto.addEventListener("click", function(){
-    raiadaD.setAttribute("src", "../img/roda/pe/dianteira/preto/preto.png");
-});
-
-peTPreto.addEventListener("click", function(){
-    raiadaT.setAttribute("src", "../img/roda/pe/traseira/preto.png");
-});
-
-raiadaDir.addEventListener("click", function(){
-    raiadaD.setAttribute("src", "../img/roda/raiada/dianteira.png");
-});
-
-raiadaTras.addEventListener("click", function(){
-    raiadaT.setAttribute("src", "../img/roda/raiada/traseira.png");
-});
-
 
 /*-----------------------------------*/
 /*Rodas*/
@@ -145,63 +121,68 @@ $('#voltarRodas').click(function(){
 });
 
 
+// roda dianteira
+const peDianteiraParalamaPreto = document.querySelector("#peDianteiraParalamaPreto");
+const peDianteiraParalamaVermelho = document.querySelector("#peDianteiraParalamaVermelho");
+const raiadaDianteiraParalamaPreto = document.querySelector("#raiadaDianteiraParalamaPreto");
+const RaiadaDianteiraParalamaPreto = document.querySelector("#raiadaDianteiraParalamaPreto");
+const raiadaDianteiraParalamaVermelho = document.querySelector("#raiadaDianteiraParalamaVermelho");
 
-/*paralama pe*/
-const paralamaPeVerm = document.querySelector("#paralamaPeVerm");
-const paralamaPePreto = document.querySelector("#paralamaPePreto");
-
-paralamaPeVerm.addEventListener("click", function(){
-    raiadaD.setAttribute("src", "../img/roda/pe/dianteira/preto/vermelho.png");
+peDianteiraParalamaPreto.addEventListener("click", function(){
+    RaiadaDianteiraParalamaPreto.setAttribute("src", "../img/roda/pe/dianteira/preto/preto.png");
 });
 
-paralamaPePreto.addEventListener("click", function(){
-    raiadaD.setAttribute("src", "../img/roda/pe/dianteira/preto/preto.png");
+peDianteiraParalamaVermelho.addEventListener("click", function(){
+    RaiadaDianteiraParalamaPreto.setAttribute("src", "../img/roda/pe/dianteira/preto/vermelho.png");
 });
 
-/*-----------------------------------*/
-/*Paralama Pe*/
+raiadaDianteiraParalamaPreto.addEventListener("click", function(){
+    RaiadaDianteiraParalamaPreto.setAttribute("src", "../img/roda/raiada/dianteira.png");
+});
 
-$('#paralamaPe').hide();
 
-$('#peDPreto').click(function(){
-    $('#paralamaPe').show();
+raiadaDianteiraParalamaVermelho.addEventListener("click", function(){
+    RaiadaDianteiraParalamaPreto.setAttribute("src", "../img/roda/raiada/paralama/vermelha.png");
+});
+
+// roda dianteira
+$('#rodaDianteira').hide();
+
+$('#rodaFrente').click(function(){
+    $('#rodaDianteira').show();
     $('#rodas').hide();
 });
 
-$('#voltarParalamaPe').click(function(){
+$('#voltarRodaD').click(function(){
     $('#rodas').show();
-    $('#paralamaPe').hide();
+    $('#rodaDianteira').hide();
 });
 
+/*roda traseira*/
+const raiadaT = document.querySelector("#raiadaT");
+const raiadaTras = document.querySelector("#raiadaTras");
+const peTPreto = document.querySelector("#peTPreto");
 
-/*paralama raiada*/
-const paralamaRaiVerm = document.querySelector("#paralamaRaiVerm");
-const paralamaRaiPreto = document.querySelector("#paralamaRaiPreto");
-
-paralamaRaiVerm.addEventListener("click", function(){
-    raiadaD.setAttribute("src", "../img/roda/raiada/paralama/vermelha.png");
+peTPreto.addEventListener("click", function(){
+    raiadaT.setAttribute("src", "../img/roda/pe/traseira/preto.png");
 });
 
-paralamaRaiPreto.addEventListener("click", function(){
-    raiadaD.setAttribute("src", "../img/roda/raiada/dianteira.png");
+raiadaTras.addEventListener("click", function(){
+    raiadaT.setAttribute("src", "../img/roda/raiada/traseira.png");
 });
 
+/*roda traseira*/
+$('#rodaTraseira').hide();
 
-/*-----------------------------------*/
-/*Paralama raiada*/
-
-$('#paralamaRai').hide();
-
-$('#raiadaDir').click(function(){
-    $('#paralamaRai').show();
+$('#rodaTras').click(function(){
+    $('#rodaTraseira').show();
     $('#rodas').hide();
 });
 
-$('#voltarParalamaRai').click(function(){
+$('#voltarRodaT').click(function(){
     $('#rodas').show();
-    $('#paralamaRai').hide();
+    $('#rodaTraseira').hide();
 });
-
 
 
 /*carenagem traseira*/

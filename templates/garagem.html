@@ -11,6 +11,11 @@
 <body>
     <div class="grade">
         <div class="caixa">Nenhum progresso encontrado</div>
+        <ul>
+        {%for m in motos%}
+            <li><a href="/app/start/{{m.id}}">{{m.titulo}}</a></li>
+        {%endfor%}
+        </ul>
     </div>
 
     <h1 class="garagem">GARAGEM</h1>
@@ -20,9 +25,10 @@
 
         <div class="menu">
             <ul>
-                <li><a href="{% url 'start' %}">Modificar moto</a></li>
-                <li><a href="{% url 'escolherMoto' %}">Escolher moto</a></li>
-                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="#">Modificar moto</a></li>
+                <li><a href="#">Escolher moto</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="{%url 'sair' %}">Sair</a></li>
             </ul>
 
         </div>
