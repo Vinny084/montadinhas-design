@@ -42,7 +42,7 @@
         <img id="carenagemTrasPreta" src="/{{moto.carenagemTraseira}}" class="start" alt="carenagem traseira preto">
 
         <!--alça-->
-        <img id="alcaOrigPreta" src="/{{moto.tanque}}" class="start" alt="alça original preta">
+        <img id="alcaOrigPreta" src="/{{moto.alca}}" class="start" alt="alça original preta">
 
         <!--tanque-->
         <img id="tanqueStartPreto" src="/{{moto.tanque}}" class="start" alt="tanque start preto">
@@ -61,6 +61,7 @@
             <button id="btFrente" class="bt"> <img src="{% static 'img/pecasMenu/frente/fan/preta.png' %}" class="img">Frente</button>
             <button id="btEscap" class="bt"> <img src="{% static 'img/pecasMenu/escap/original.png' %}" class="img">Escapamento</button>
             <button id="btTampaMotor" class="bt"> <img src="{% static 'img/pecasMenu/tampa motor/prata.png' %}" class="img">Tampa do motor</button>
+            <button id="btSalva" class="bt"> <img src="" class="img">Salvar</button>
         </div>
 
         <!-- escolher rodas-->
@@ -273,6 +274,7 @@
                 <li><a href="{% url 'escolherMoto' %}">Escolher moto</a></li>
                 <li><a href="{% url 'garagem' %}">Garagem</a></li>
                 <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{%url 'sair' %}">Sair</a></li>
             </ul>
 
         </div>
