@@ -82,10 +82,11 @@
             <button id="voltarRodaD" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button>
 
             <!--roda dianteira-->
-            <a href="{%url 'edit_roda_d' moto.id 'pe dianteira'%}" id="peDianteiraParalamaPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">pe paralama Preto</a>
-            <a href="{%url 'edit_roda_d' moto.id 'raiada diateira'%}" id="peDianteiraParalamaVermelho" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">pe paralama Vermelho</a>
-            <button id="raiadaDianteiraParalamaPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">raiada paralama preto</button>
-            <button id="raiadaDianteiraParalamaVermelho" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/rai/vermelho.png' %}" class="img">raiada paralama vermelho</button>
+            <a href="{%url 'edit_roda_d' moto.id 0%}" id="peDianteiraParalamaPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">pe paralama Preto</a>
+            <a href="{%url 'edit_roda_d' moto.id 1%}" id="peDianteiraParalamaVermelho" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">pe paralama Vermelho</a>
+            <a href="{%url 'edit_roda_d' moto.id 2%}" id="raiadaDianteiraParalamaPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}"  class="img">raiada paralama preto</a>
+            <a href="{%url 'edit_roda_d' moto.id 3%}" id="raiadaDianteiraParalamaVermelho" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/rai/vermelho.png' %}"  class="img">raiada paralama vermelho</a>
+            
         </div>
 
         <!--rodas traseira-->
@@ -98,54 +99,6 @@
             <button id="raiadaTras" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiTraseira.png' %}" class="img">roda raiada traseira</button>
 
         </div>
-        <!--paralamaPe-->
-        <!-- <div id="paralamaPe" class="divPecas">
-            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
-            <button id="voltarParalamaPe" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
-            <!--paralama pe-->
-           
-           
-        <!-- </div> -->
-
-        <!--paralamaRai-->
-        <!-- <div id="paralamaRai" class="divPecas">
-            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
-            <button id="voltarParalamaRai" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
-            <!--paralama raiada-->
-            
-        <!-- </div> -->
-        
-        <!--rodas-->
-        <!-- <div id="rodas" class="divPecas">
-            <div id="descricaoMenu" class="descricao">Escolha uma roda</div>
-            <button id="voltarRodas" class="bt"> <img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
-            <!--roda pe-->
-            <!-- <button id="peTPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peTrazeira.png' %}" class="img">roda pe traseira</button>
-            <button id="peDPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">roda pe dianteira</button> -->
-
-            <!--roda raiada-->
-            <!-- <button id="raiadaTras" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiTraseira.png' %}" class="img">roda raiada traseira</button>
-            <button id="raiadaDir" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">roda raiada dianteira</button>
-
-        </div> -->
-
-        <!--paralamaPe-->
-        <!-- <div id="paralamaPe" class="divPecas">
-            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
-            <button id="voltarParalamaPe" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
-            <!--paralama pe-->
-            <!-- <a href="{%url 'edit_roda_d' moto.id 'pe dianteira'%}" id="paralamaPePreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">paralama pe Preto</a>
-            <a  href="{%url 'edit_roda_d' moto.id 'raiada diateira'%}" id="paralamaPeVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/pe/vermelho.png' %}" class="img">paralama pe Vermelho</button>
-        </div> -->
-
-        <!--paralamaRai-->
-        <!-- <div id="paralamaRai" class="divPecas">
-            <div id="descricaoMenu" class="descricao">Escolha uma cor</div>
-            <button id="voltarParalamaRai" class="bt"><img src="{% static 'img/pecasMenu/voltar.png' %}" class="img"></button> -->
-            <!--paralama raiada-->
-            <!-- <button id="paralamaRaiPreto" class="bt"> <img src="{% static 'img/pecasMenu/rodas/raiDianteira.png' %}" class="img">paralama preto raiada</button>
-            <button id="paralamaRaiVerm" class="bt"> <img src="{% static 'img/pecasMenu/rodas/paralama/rai/vermelho.png' %}" class="img">paralama vermelho raiada</button>
-        </div> -->
 
         <!--tanque-->
         <div id="tanque" class="divPecas">

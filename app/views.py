@@ -15,7 +15,16 @@ def sobre (request):
 
 def mudar_roda_d (request, id, valor):
     moto = Moto.objects.get(pk = id)
-    moto.roda_d = valor
+    print("editar moto", id, valor)
+    if valor == 0:
+        moto.roda_d = "static/img/roda/pe/dianteira/preto/preto.png"
+    elif valor == 1:
+        moto.roda_d = "static/img/roda/pe/dianteira/preto/vermelho.png"
+    elif valor ==2 :
+        moto.roda_d = "static/img/roda/raiada/dianteira.png"
+    else:
+        moto.roda_d = "static/img/roda/raiada/paralama/vermelha.png"
+    
     moto.save()
     return redirect (f"/app/start/{id}")
 
