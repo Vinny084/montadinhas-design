@@ -24,6 +24,26 @@ CARENAGENS_TRASEIRA =[
     ("static/img/carenagem/traseira/carenagemTrasVerm.png", "VERMELHO"),
 ]
 
+FRENTES = [
+    ("static/img/frente/frente fan 22/frente fan 22 preta.png", "Fan preta"),
+    ("static/img/frente/frente fan 22/frente fan 22 verm.png","Fan vermelha"),
+    ("static/img/frente/frente titan 22/frente titan 22 preta.png","Titan preta"), 
+    ("static/img/frente/frente titan 22/frente titan 22 verm.png", "Titan vermelha"),
+    ("static/img/frente/frente tw/frente tw preta.png", "Twister preta"),
+    ("static/img/frente/frente tw/frente tw verm.png", "Twister vermelha"),        
+]
+
+ESCAPAMENTOS =[
+    ("static/img/escapamento/original/escapOrigPrata.png", "original"),
+    ("static/img/escapamento/delata/escapDeLata.png", "delata"),
+    ("static/img/escapamento/delata/escapDeLataProt.png", "delata com protecao"),
+    ("static/img/escapamento/delata/escapTorbalEstra.png", "torbal"),
+    ("static/img/escapamento/dore/escapDoreAzulAT.png", "dore azul"),
+    ("static/img/escapamento/dore/escapDoreVermAT.png", "dore vermelho"),
+    ("static/img/escapamento/dore/escapDorePretoAT.png", "dore preto"),
+    ("static/img/escapamento/dore/escapDorePolidoAT.png", "dore prata"),
+]
+
 RABETAS =[
     ("static/img/rabeta/rabetaOrig01.png", "Orig01"),
     ("static/img/rabeta/rabetaOrig02.png", "Orig02"),
@@ -49,6 +69,8 @@ ALÇAS =[
     ("static/img/alca/alcaOrigCromo.png", "cromo"),
     ("static/img/alca/alcaAltaPreta.png", "alta preta"),
     ("static/img/alca/alcaAltaCromo.png", "alta cromo"),
+    ("static/img/alca/alcaTitanPreta.png", "titan preta"),
+    ("static/img/alca/alcaTitanPrata.png", "titan prata"),
     ("static/img/alca/churrasqueiraCromo.png", "churrasqueira cromo"),
     ("static/img/alca/churrasqueiraCromoGivi.png", "churrasqueira cromo givi"),
     ("static/img/alca/churrasqueiraCromoGiviBau.png", "churrasqueira cromo givi bau"),
@@ -59,26 +81,6 @@ ALÇAS =[
     ("static/img/alca/churrasqueiraPretaGiviBau.png", "churrasqueira preta givi bau"),
     ("static/img/alca/churrasqueiraPretaSup.png", "churrasqueira preta suporte"),
     ("static/img/alca/churrasqueiraPretaSupBau.png", "churrasqueira preta suporte bau"),
-]
-
-FRENTES = [
-    ("static/img/frente/frente fan 22/frente fan 22 preta.png", "Fan preta"),
-    ("static/img/frente/frente fan 22/frente fan 22 verm.png","Fan vermelha"),
-    ("static/img/frente/frente titan 22/frente titan 22 preta.png","Titan preta"), 
-    ("static/img/frente/frente titan 22/frente titan 22 verm.png", "Titan vermelha"),
-    ("static/img/frente/frente tw/frente tw preta.png", "Twister preta"),
-    ("static/img/frente/frente tw/frente tw verm.png", "Twister vermelha"),        
-]
-
-ESCAPAMENTOS =[
-    ("static/img/escapamento/original/escapOrigPrata.png", "original"),
-    ("static/img/escapamento/delata/escapDeLata.png", "delata"),
-    ("static/img/escapamento/delata/escapDeLataProt.png", "delata com protecao"),
-    ("static/img/escapamento/delata/escapTorbalEstra.png", "torbal"),
-    ("static/img/escapamento/dore/escapDoreAzulAT.png", "dore azul"),
-    ("static/img/escapamento/dore/escapDoreVermAT.png", "dore vermelho"),
-    ("static/img/escapamento/dore/escapDorePretoAT.png", "dore preto"),
-    ("static/img/escapamento/dore/escapDorePolidoAT.png", "dore prata"),
 ]
 
 TAMPAS_MOTOR =[
@@ -104,12 +106,6 @@ class Moto(models.Model):
 class Start(Moto):
     pass
         
-
-# class Fan(Moto):
-#     pass
-
-# class Titan(Moto):
-#     pass
 
 class Projeto(models.Model):
     moto = models.ForeignKey(

@@ -166,7 +166,7 @@ frenteFan22Verm.addEventListener("click", function(){
 
 $('#frenteFan').hide();
 
-$('#frentefan22preta').click(function(){
+$('#frentefan22').click(function(){
     $('#frenteFan').show();
     $('#frente').hide();
 });
@@ -195,16 +195,16 @@ frenteTitan22Verm.addEventListener("click", function(){
 /*-----------------------------------*/
 /*Frente Titan 22*/
 
-$('#frenteTitan22').hide();
+$('#frenteTitan').hide();
 
-$('#frentetitan22preta').click(function(){
-    $('#frenteTitan22').show();
+$('#frentetitan22').click(function(){
+    $('#frenteTitan').show();
     $('#frente').hide();
 });
 
 $('#voltarFrenteTitan22').click(function(){
     $('#frente').show();
-    $('#frenteTitan22').hide();
+    $('#frenteTitan').hide();
 });
 
 
@@ -227,7 +227,7 @@ frenteTwVerm.addEventListener("click", function(){
 
 $('#frenteTw').hide();
 
-$('#frenteTwPreta').click(function(){
+$('#frenteTw22').click(function(){
     $('#frenteTw').show();
     $('#frente').hide();
 });
@@ -237,6 +237,20 @@ $('#voltarFrenteTW').click(function(){
     $('#frenteTw').hide();
 });
 
+/*-----------------------------------*/
+/*escapamento*/
+
+$('#escap').hide();
+
+$('#btEscap').click(function(){
+    $('#escap').show();
+    $('#selecPecas').hide();
+});
+
+$('#voltarEscap').click(function(){
+    $('#selecPecas').show();
+    $('#escap').hide();
+});
 
 /*escapamento*/
 const escapeDeLata = document.querySelector("#escapeDeLata");
@@ -282,20 +296,18 @@ escapeDorePolidoAT.addEventListener("click", function(){
 });
 
 /*-----------------------------------*/
-/*escapamento*/
+/*Rabeta*/
+$('#rabeta').hide();
 
-$('#escap').hide();
-
-$('#btEscap').click(function(){
-    $('#escap').show();
+$('#btRabeta').click(function(){
+    $('#rabeta').show();
     $('#selecPecas').hide();
 });
 
-$('#voltarEscap').click(function(){
+$('#voltarRabeta').click(function(){
     $('#selecPecas').show();
-    $('#escap').hide();
+    $('#rabeta').hide();
 });
-
 
 /*rabeta*/
 const rabetaOrig01 = document.querySelector("#rabetaOrig01");
@@ -386,22 +398,6 @@ rabetaNvIII03.addEventListener("click", function(){
     rabetaOrig01.setAttribute("src", "../img/rabeta/rabetaNvIII03.png");
 })
 
-/*-----------------------------------*/
-/*Rabeta*/
-$('#rabeta').hide();
-
-$('#btRabeta').click(function(){
-    $('#rabeta').show();
-    $('#selecPecas').hide();
-});
-
-$('#voltarRabeta').click(function(){
-    $('#selecPecas').show();
-    $('#rabeta').hide();
-});
-
-
-
 /*alça*/
 const alcaOrigCromo = document.querySelector("#alcaOrigCromo");
 const alcaOrigPreta = document.querySelector("#alcaOrigPreta");
@@ -487,7 +483,6 @@ churrasqueiraPretaSupBau.addEventListener("click", function(){
     alcaOrigPreta.setAttribute("src", "../img/alca/churrasqueiraPretaSupBau.png");
 });
 
-
 /*-----------------------------------*/
 /*alça*/
 
@@ -501,6 +496,21 @@ $('#btAlca').click(function(){
 $('#voltarAlca').click(function(){
     $('#selecPecas').show();
     $('#alca').hide();
+});
+
+/*-----------------------------------*/
+/*tampa motor*/
+
+$('#tampaMotor').hide();
+
+$('#btTampaMotor').click(function(){
+    $('#tampaMotor').show();
+    $('#selecPecas').hide();
+});
+
+$('#voltarTampaMotor').click(function(){
+    $('#selecPecas').show();
+    $('#tampaMotor').hide();
 });
 
 
@@ -518,17 +528,3 @@ tampaPreta.addEventListener("click", function(){
     tampaPrata.setAttribute("src", "../img/motor/tampaLateral/TampaPretaMotor.png");
 });
 
-/*-----------------------------------*/
-/*tampa motor*/
-
-$('#tampaMotor').hide();
-
-$('#btTampaMotor').click(function(){
-    $('#tampaMotor').show();
-    $('#selecPecas').hide();
-});
-
-$('#voltarTampaMotor').click(function(){
-    $('#selecPecas').show();
-    $('#tampaMotor').hide();
-});
