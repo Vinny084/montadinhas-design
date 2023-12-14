@@ -36,3 +36,21 @@ def garagem (request):
          motos = Moto.objects.all()
     
     return render (request, 'garagem.html',{"motos": motos})    
+
+@login_required(login_url="/usuarios/login")
+def novo (request):
+    nova = Moto( 
+        titulo = "sem nome", 
+        roda_t = "static/img/roda/raiada/traseira.png", 
+        roda_d = "static/img/roda/raiada/dianteira.png",
+        rabeta = "static/img/rabeta/rabetaOrig01.png",
+        alca = "static/img/alca/alcaOrigPreta.png",
+        carenagemTraseira = "static/img/carenagem/traseira/carenagemTrasPreta.png",
+        frente = "static/img/frente/frente fan 22/frente fan 22 preta.png",
+        escapamento = "static/img/escapamento/original/escapOrigPrata.png",
+        tampaMotor = "static/img/vazio.png",
+        tanque = "static/img/tanque/tanqueStartPreto.png",
+        usu = request.user)
+    nova.save()
+
+    return redirect(f"/app/start/{nova.id}")
