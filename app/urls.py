@@ -17,5 +17,6 @@ urlpatterns = [
     path('edit/moto/<int:id>/escapamento/<int:valor>', views.mudar_escapamento, name='edit_escapamento'),
     path('edit/moto/<int:id>/rabeta/<int:valor>', views.mudar_rabeta, name='edit_rabeta'),
     path('edit/moto/<int:id>/alca/<int:valor>', views.mudar_alca, name='edit_alca'),
+    path('edit/moto/<int:id>/salvarnome', views.salvar_nome, name='salvarnome'),
     path('edit/moto/<int:id>/tampaMotor/<int:valor>', views.mudar_tampaMotor, name='edit_tampaMotor'),
 ]

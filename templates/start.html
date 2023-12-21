@@ -52,6 +52,7 @@
 
     <div class="barra">
         <div id="selecPecas" class="divPecas">
+            
             <div id="descricaoMenu" class="descricao">Escolha um modelo de peça</div>
             <button id="btRodas" class="bt"> <img src="{% static 'img/pecasMenu/rodas/peDiranteira.png' %}" class="img">Rodas</button>
             <button id="btTanque" class="bt"> <img src="{% static 'img/pecasMenu/tanque/preto.png' %}" class="img">Tanque</button>
@@ -61,7 +62,6 @@
             <button id="btRabeta" class="bt"> <img src="{% static 'img/pecasMenu/rabeta/rabetaOrig01.png' %}" class="img">Rabeta</button>
             <button id="btAlca" class="bt"> <img src="{% static 'img/pecasMenu/alça/preto.png' %}" class="img">Alça</button>
             <button id="btTampaMotor" class="bt"> <img src="{% static 'img/pecasMenu/tampa motor/prata.png' %}" class="img">Tampa do motor</button>
-            <!-- <button id="btSalva" class="bt"> <img src="" class="img">Salvar</button> -->
         </div>
 
         <!-- escolher rodas-->
@@ -222,7 +222,7 @@
         
     </div>
 
-    <header>
+    <header >
         <div class="titulo"><h1>MONTADINHAS DESIGN</h1></div>
 
         <div class="menu">
@@ -234,6 +234,12 @@
 
         </div>
     </header>    
+    <nav>
+    <form id="nomeProjeto" class="titulo" action="{%url 'salvarnome' moto.pk %}" method="post" class="descricao">
+        {% csrf_token %}<input type="text" name="nome" id="nome" autocomplete="off" value="{{moto.titulo}}"  onblur="mudarnome(this.value)">
+    </form>
+
+    </nav>
     <script src="{% static 'start.js' %}"></script>
 </body>
 </html>

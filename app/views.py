@@ -237,3 +237,11 @@ def novo (request):
     nova.save()
 
     return redirect(f"/app/start/{nova.id}")
+
+def salvar_nome (request, id):
+    moto = Moto.objects.get(pk = id)
+    nome = request.POST.get("nome", None)
+    if moto is not None and nome is not None:
+        moto.titulo = nome    
+    moto.save()
+    return redirect (f"/app/start/{id}")
