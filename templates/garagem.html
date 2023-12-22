@@ -10,14 +10,10 @@
 </head>
 <body>
     <div class="grade">
-        <div class="caixa">
-            <a href="/app/novo">  crie um projeto</a>
-          </div>
+            <a class="caixaCriar" href="/app/novo">  crie um projeto</a>
         {%for m in motos%}
-        
-            <li class="caixa"><a href="/app/start/{{m.id}}">{{m.titulo}}</a></li>
+            <a class="caixa" href="/app/start/{{m.id}}">{{m.titulo}}</a>
         {%endfor%}
-        
     </div>
 
     <h1 class="garagem">GARAGEM</h1>
