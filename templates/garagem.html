@@ -12,7 +12,12 @@
     <div class="grade">
             <a class="caixaCriar" href="/app/novo">  crie um projeto</a>
         {%for m in motos%}
-            <a class="caixa" href="/app/start/{{m.id}}">{{m.titulo}}</a>
+          
+            <div class="caixa">  
+                <a href="/app/start/{{m.id}}">{{m.titulo}}</a>
+                <a href="/app/moto/{{m.id}}/excluir" class="btexcluir">excluir</a>
+            </div>
+
         {%endfor%}
     </div>
 
@@ -23,7 +28,7 @@
 
         <div class="menu">
             <ul>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
                 <li><a href="{%url 'sair' %}">Sair</a></li>
             </ul>
 

@@ -19,4 +19,5 @@ urlpatterns = [
     path('edit/moto/<int:id>/alca/<int:valor>', views.mudar_alca, name='edit_alca'),
     path('edit/moto/<int:id>/salvarnome', views.salvar_nome, name='salvarnome'),
     path('edit/moto/<int:id>/tampaMotor/<int:valor>', views.mudar_tampaMotor, name='edit_tampaMotor'),
+    path('moto/<int:id>/excluir', views.excluir, name='excluir'),
 ]

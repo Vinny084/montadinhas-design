@@ -245,3 +245,9 @@ def salvar_nome (request, id):
         moto.titulo = nome    
     moto.save()
     return redirect (f"/app/start/{id}")
+
+def excluir (request, id):
+    moto = Moto.objects.get(pk = id)
+    if moto is not None:
+        moto.delete()
+    return redirect (f"/app/garagem/")
