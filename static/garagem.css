@@ -109,5 +109,17 @@ a:link {
 }
 
 .btexcluir {
-    background-color: black;
+    display: block;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
+    width: 103px;
+    height: 41px;
+    left: 102px;
+    top: 8px;
+}
+
+
+.btexcluir:hover {
+    background-color: rgb(82, 1, 1);
 }
